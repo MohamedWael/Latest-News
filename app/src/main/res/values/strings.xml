@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Latest News</string>
+    <string name="news_api_key">8b118e8e691c4882a4c58948efab0848</string>
+</resources>
