@@ -6,7 +6,7 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import com.github.mohamedwael.latestnews.applevel.network.ErrorHandler
 import com.github.mohamedwael.latestnews.applevel.network.ErrorHandlerImpl
-import com.github.mohamedwael.latestnews.applevel.network.RestCleint
+import com.github.mohamedwael.latestnews.applevel.network.RestClient
 import com.github.mohamedwael.latestnews.applevel.network.Retrofit
 
 open class NetworkServiceImpl<Response, RestClient> : NetworkService<Response, RestClient> {
@@ -28,8 +28,8 @@ open class NetworkServiceImpl<Response, RestClient> : NetworkService<Response, R
     }
 }
 
-fun <Response> network(service: NetworkService<Response, RestCleint>.() -> Unit): NetworkService<Response, RestCleint> {
-    val networkService = NetworkServiceImpl<Response, RestCleint>()
+fun <Response> network(service: NetworkService<Response, RestClient>.() -> Unit): NetworkService<Response, RestClient> {
+    val networkService = NetworkServiceImpl<Response, RestClient>()
     service(networkService)
     return networkService
 }
