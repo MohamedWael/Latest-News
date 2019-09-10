@@ -18,7 +18,6 @@ import java.lang.Exception
 class NewsRepoImpl : NewsRepo {
 
     override val liveErrorHandler: MutableLiveData<ErrorHandler> = MutableLiveData()
-//    override val liveIsLastItem: MutableLiveData<Boolean> = MutableLiveData()
 
 
     override fun getNewsDataSource(): DataSource.Factory<Int, ArticleItem> {
