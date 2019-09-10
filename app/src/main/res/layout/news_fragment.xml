@@ -23,13 +23,6 @@
             android:layout_margin="4dp" />
 
         <ProgressBar
-            android:id="@+id/LoadMoreProgress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:visibility="@{viewModel.isLoadingMore?View.VISIBLE :View.GONE}" />
-
-        <ProgressBar
             android:id="@+id/progress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

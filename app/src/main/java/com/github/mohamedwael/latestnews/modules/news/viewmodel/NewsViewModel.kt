@@ -12,7 +12,6 @@ import com.github.mohamedwael.latestnews.modules.news.response.ArticleItem
 
 class NewsViewModel(private val newsRepo: NewsRepo) : ViewModel() {
 
-    val isLoadingMore = ObservableField(false)
     val showProgress = ObservableField(false)
 
     val errorHandler: LiveData<ErrorHandler>
@@ -35,6 +34,5 @@ class NewsViewModel(private val newsRepo: NewsRepo) : ViewModel() {
 
     fun hideProgress() {
         showProgress.set(false)
-        isLoadingMore.set(false)
     }
 }
