@@ -9,21 +9,18 @@ import org.joda.time.format.DateTimeFormat
 fun formatTime(isoDateToBeConverted: String): String {
     val timeZone = DateTimeZone.getDefault()
     val formatter = DateTimeFormat.forPattern("dd MMMM HH:MM").withZone(timeZone)
-    val dateTime2 = timeInMillies(isoDateToBeConverted)
+    val dateTime2 = timeToMillis(isoDateToBeConverted)
     return formatter.print(dateTime2)
 }
 
 
-fun timeInMillies(isoDateToBeConverted: String): Long {
-    val timeZone = DateTimeZone.getDefault()
-    val formatter = DateTimeFormat.forPattern("dd MMMM HH:MM").withZone(timeZone)
-    val dateTime = DateTime(isoDateToBeConverted, timeZone)
-    return dateTime.millis
+fun timeToMillis(isoDateToBeConverted: String): Long {
+    return DateTime(isoDateToBeConverted, DateTimeZone.getDefault()).millis
 }
 
 fun getRelativeTime(isoDateToBeConverted: String): CharSequence {
     return DateUtils.getRelativeTimeSpanString(
-        timeInMillies(isoDateToBeConverted),
+        timeToMillis(isoDateToBeConverted),
         System.currentTimeMillis(),
         0L,
         DateUtils.FORMAT_ABBREV_ALL
