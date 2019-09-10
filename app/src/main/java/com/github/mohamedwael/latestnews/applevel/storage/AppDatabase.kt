@@ -6,12 +6,12 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.github.mohamedwael.latestnews.R
 import com.github.mohamedwael.latestnews.applevel.storage.dao.ArticlesDao
-import com.github.mohamedwael.latestnews.modules.response.ArticlesItem
+import com.github.mohamedwael.latestnews.modules.news.response.ArticleItem
 
 
 @Database(
-    entities = [ArticlesItem::class],
-    version = 1
+    entities = [ArticleItem::class],
+    version = 2
 )
 abstract class AppDatabase : RoomDatabase() {
 

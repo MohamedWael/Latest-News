@@ -16,15 +16,11 @@ object Retrofit {
     var httpClient: OkHttpClient.Builder? = null
     private var retrofit: Retrofit? = null
 
-    fun init(baseUrl: String) {
-        init(OkHttpClient.Builder(), baseUrl, GsonConverterFactory.create())
-    }
-
 
     fun init(
         httpClient: OkHttpClient.Builder = OkHttpClient.Builder(),
         baseUrl: String,
-        factory: Converter.Factory
+        factory: Converter.Factory = GsonConverterFactory.create()
     ) {
         com.github.mohamedwael.latestnews.applevel.network.Retrofit.httpClient = httpClient
         setUpLogger()

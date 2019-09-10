@@ -1,12 +1,9 @@
-package com.github.mohamedwael.latestnews.modules.response
+package com.github.mohamedwael.latestnews.modules.news.response
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 data class Source(
-
-	@field:SerializedName("id")
-	val id: Long? = null,
 
 	@field:SerializedName("name")
 	val name: String? = null

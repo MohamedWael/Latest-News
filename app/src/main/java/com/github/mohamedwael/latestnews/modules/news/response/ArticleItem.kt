@@ -1,13 +1,14 @@
-package com.github.mohamedwael.latestnews.modules.response
+package com.github.mohamedwael.latestnews.modules.news.response
 
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import io.reactivex.annotations.Nullable
 import java.io.Serializable
 
 @Entity(tableName = "articles")
-data class ArticlesItem(
+data class ArticleItem(
 
     @Embedded
 	@field:SerializedName("source")
@@ -24,7 +25,7 @@ data class ArticlesItem(
 
     @PrimaryKey
 	@field:SerializedName("url")
-	val url: String? = null,
+	var url: String = "",
 
 	@field:SerializedName("urlToImage")
 	val urlToImage: String? = null,
