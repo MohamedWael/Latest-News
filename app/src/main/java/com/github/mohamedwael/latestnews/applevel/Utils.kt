@@ -1,11 +1,9 @@
 package com.github.mohamedwael.latestnews.applevel
 
-import android.content.Context
 import android.text.format.DateUtils
 import org.joda.time.DateTime
-import org.joda.time.format.DateTimeFormat
 import org.joda.time.DateTimeZone
-import java.security.AccessControlContext
+import org.joda.time.format.DateTimeFormat
 
 
 fun formatTime(isoDateToBeConverted: String): String {
